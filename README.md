@@ -57,7 +57,12 @@ cp vpn/example.conf vpn/vpn.conf
 6. Run the docker compose. This command may take around a minute to download all docker images and run.
 ```bash
 docker compose up 
-``` 
+```
+
+## What a successful startup looks like
+![success run](https://github.com/it-hms/t2m-soft-vpn-client/assets/72526279/9c5113f4-6031-419a-8504-e4548ef33559)
+
+
 
 ## 
 
