@@ -60,9 +60,11 @@ docker compose up
 ```
 
 ## What a successful startup looks like
-![success run](https://github.com/it-hms/t2m-soft-vpn-client/assets/72526279/9c5113f4-6031-419a-8504-e4548ef33559)
+When running there are some docker images that will be downloaded. Please be patient. When the containers start running you will see logs for both containers.
+![success run](https://github.com/it-hms/t2m-soft-vpn-client/assets/72526279/9c5113f4-6031-419a-8504-e4548ef33559)\
 
 
 
-## 
+
+
 
