@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  t2m-client:
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./vpn:/vpn
+    devices:
+      - "/dev/net/tun"
+    network_mode: "host"
+    image: iantracy/t2m-client:latest
+    environment:
+      - LAN_IFACE=eno1
+    restart: always
+    healthcheck:
+      test: ["CMD", "ping", "-c", "1" ,  "device.vpn36.talk2m.com"]
+      interval: 2m30s
+      timeout: 20s
+      retries: 3
+      start_period: 2m
+
+  t2m-gre:
+    image: iantracy/t2m-gre:latest
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    network_mode: "host"
